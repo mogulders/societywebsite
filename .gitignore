@@ -1,0 +1,92 @@
+# ---- Dependencies ----
+node_modules/
+
+# ---- Build output ----
+dist/
+dist-ssr/
+build/
+
+# ---- Environment variables (never commit secrets) ----
+.env
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+.env.staging
+.env.staging.local
+# Keep the example file so teammates know what's needed
+!.env.example
+
+# ---- Vite ----
+*.local
+vite.config.js.timestamp-*
+
+# ---- Logs ----
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- Package manager extras (keep package-lock.json) ----
+yarn.lock
+pnpm-lock.yaml
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ---- macOS ----
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# ---- Editors ----
+# VSCode (allow shared extension recommendations and settings)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# Cursor
+.cursor/
+
+# ---- Testing / Coverage ----
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# ---- Deploy / Hosting ----
+.vercel/
+.netlify/
+.firebase/
+
+# ---- Misc ----
+*.tgz
+*.zip
+.cache/
+.parcel-cache/
+.turbo/

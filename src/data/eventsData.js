@@ -1,0 +1,38 @@
+export const events = [
+  {
+    id: 1,
+    title: 'Live Music Friday',
+    day: 'Friday',
+    date: 'Every Friday',
+    time: '8:00 PM – Close',
+    description: 'Local Greenville artists take the stage. No cover charge. Just good music and cold drinks.',
+    tag: 'Live Music',
+  },
+  {
+    id: 2,
+    title: 'Trivia Night',
+    day: 'Wednesday',
+    date: 'Every Wednesday',
+    time: '7:00 PM',
+    description: 'Test your brain. Prizes for the top three teams. Drink specials all night long.',
+    tag: 'Themed Night',
+  },
+  {
+    id: 3,
+    title: 'Sunday Funday',
+    day: 'Sunday',
+    date: 'Every Sunday',
+    time: '12:00 PM – All Day',
+    description: 'Brunch bites, strong drinks, and the best crowd in Greenville. No judgment, all vibes.',
+    tag: 'Special',
+  },
+  {
+    id: 4,
+    title: 'Thirsty Thursday',
+    day: 'Thursday',
+    date: 'Every Thursday',
+    time: '5:00 PM – Close',
+    description: 'Drink specials all evening. Bring the crew, grab a booth, and let Thursday be your Friday.',
+    tag: 'Themed Night',
+  },
+]
