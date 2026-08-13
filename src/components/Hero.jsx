@@ -4,28 +4,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        background: `
-          radial-gradient(ellipse at 20% 60%, rgba(190,24,35,0.30) 0%, transparent 55%),
-          radial-gradient(ellipse at 80% 30%, rgba(215,141,5,0.18) 0%, transparent 50%),
-          #171717
-        `,
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg"
     >
       {/* Subtle texture overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(255,255,255,1) 2px,
-            rgba(255,255,255,1) 3px
-          )`,
-        }}
-      />
+      <div className="absolute inset-0 opacity-[0.04] hero-texture" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20">
@@ -43,10 +25,10 @@ export default function Hero() {
         <p className="section-eyebrow mb-4">Greenville, SC &middot; 18 E. Coffee St.</p>
 
         {/* Headline */}
-        <h1 className="font-display uppercase leading-none text-white mb-2" style={{ fontSize: 'clamp(3rem, 10vw, 7rem)' }}>
+        <h1 className="font-display uppercase leading-none text-white mb-2 text-hero-title">
           Society
         </h1>
-        <h2 className="font-display uppercase leading-none text-society-gold mb-6" style={{ fontSize: 'clamp(1.2rem, 4vw, 2.5rem)', letterSpacing: '0.15em' }}>
+        <h2 className="font-display uppercase leading-none text-society-gold mb-6 text-hero-subtitle">
           Sandwich Bar &amp; Social Club
         </h2>
 

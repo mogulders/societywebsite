@@ -5,13 +5,7 @@ export default function Events() {
   return (
     <section
       id="events"
-      className="py-20 md:py-28 scroll-mt-16"
-      style={{
-        background: `
-          radial-gradient(ellipse at bottom center, rgba(190,24,35,0.08) 0%, transparent 70%),
-          #171717
-        `,
-      }}
+      className="py-20 md:py-28 scroll-mt-16 events-bg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
