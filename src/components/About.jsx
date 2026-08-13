@@ -11,7 +11,7 @@ export default function About() {
               <div className="absolute inset-0 rounded-full bg-society-gold/10 blur-3xl scale-125" />
               <img
                 src="/logo.png"
-                alt="Society mascot"
+                alt="Society Sandwich Bar and Social Club logo"
                 className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full border-4 border-society-gold/50 shadow-2xl"
               />
             </div>
