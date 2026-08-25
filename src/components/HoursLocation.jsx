@@ -109,35 +109,17 @@ export default function HoursLocation() {
           </div>
 
           {/* Map */}
-          <div className="rounded-xl overflow-hidden border border-white/10 min-h-[400px] bg-society-black flex items-center justify-center">
-            {/*
-              TODO: Replace this placeholder with a Google Maps embed iframe.
-              To get the embed URL:
-              1. Go to maps.google.com and search "18 E Coffee St Greenville SC"
-              2. Click Share > Embed a map > Copy HTML
-              3. Paste the <iframe> src URL below
-
-              Example:
-              <iframe
-                src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE_HERE"
-                width="100%"
-                height="100%"
-                className="map-iframe"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Society Sandwich Bar location"
-              />
-            */}
-            <div className="text-center px-8">
-              <svg className="w-16 h-16 text-society-gold/30 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <p className="font-display uppercase tracking-widest text-white/30 text-sm">18 E. Coffee St.</p>
-              <p className="font-display uppercase tracking-widest text-white/20 text-sm">Greenville, SC 29601</p>
-              <p className="font-body text-white/20 text-xs mt-3">Map embed coming soon</p>
-            </div>
+          <div className="rounded-xl overflow-hidden border border-white/10 min-h-[400px]">
+            <iframe
+              src="https://maps.google.com/maps?q=18+E+Coffee+St,+Greenville,+SC+29601&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ minHeight: '400px', border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Society Sandwich Bar location"
+            />
           </div>
 
         </div>

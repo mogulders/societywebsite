@@ -50,14 +50,6 @@ export default function Hero() {
           Open Daily &nbsp;&bull;&nbsp; 11:00 AM – 2:00 AM
         </p>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <div className="w-0.5 h-8 bg-white/20 rounded-full" />
-        <svg className="w-4 h-4 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
     </section>
   )
 }

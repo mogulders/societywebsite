@@ -12,7 +12,7 @@ export const menuData = {
       name: 'The Society OG',
       price: '$14',
       description: 'Smash beef patty, American cheese, house sauce, shredded lettuce, pickles, brioche bun.',
-      image: null,
+      image: '/images/food/food-society-og.jpg',
       allergens: ['Gluten', 'Dairy', 'Eggs'],
     },
     {
@@ -33,21 +33,21 @@ export const menuData = {
       name: 'Crispy Bird',
       price: '$14',
       description: 'Fried chicken thigh, honey hot sauce, house slaw, pickles, brioche bun.',
-      image: null,
+      image: '/images/food/food-crispy-bird.jpg',
       allergens: ['Gluten', 'Eggs'],
     },
     {
       name: 'Philly Mob',
       price: '$15',
       description: 'Shaved ribeye, sautéed peppers & onions, cheese whiz, hoagie roll.',
-      image: null,
+      image: '/images/food/food-philly-mob.jpg',
       allergens: ['Gluten', 'Dairy', 'Soy'],
     },
     {
       name: 'The Cuban',
       price: '$13',
       description: 'Roasted pork, ham, swiss, mustard, pickles, pressed on Cuban bread.',
-      image: null,
+      image: '/images/food/food-the-cuban.jpg',
       allergens: ['Gluten', 'Dairy'],
     },
     {
@@ -174,7 +174,7 @@ export const menuData = {
       name: 'Rotating Draft',
       price: '$7',
       description: 'Ask your bartender what\'s pouring today — always local, always cold.',
-      image: null,
+      image: '/images/food/food-rotating-draft.jpg',
       allergens: ['Gluten'],
     },
     {
