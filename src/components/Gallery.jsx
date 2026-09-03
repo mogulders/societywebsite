@@ -1,30 +1,35 @@
-const PLACEHOLDER_TONES = [
-  'bg-society-red/20',
-  'bg-society-gold/15',
-  'bg-white/5',
-  'bg-society-red/10',
-  'bg-white/5',
-  'bg-society-gold/10',
-  'bg-society-red/15',
-  'bg-white/5',
-  'bg-society-gold/20',
-  'bg-white/5',
-  'bg-society-red/10',
-  'bg-society-gold/10',
+import { useState } from 'react'
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
+
+const GALLERY_IMAGES = [
+  { src: '/images/gallery/gallery-01-dining-room.jpg', alt: 'Society dining room with neon sign and full house' },
+  { src: '/images/gallery/gallery-02-neon-sign.jpg', alt: 'Society neon sign glowing above the crowd' },
+  { src: '/images/gallery/gallery-03-bartender-shaking.jpg', alt: 'Bartender shaking cocktails at the bar' },
+  { src: '/images/gallery/gallery-04-bartender-hype.jpg', alt: 'Bartender bringing the energy behind the bar' },
+  { src: '/images/gallery/gallery-10-bar-pour.jpg', alt: 'Bartender pouring a cocktail' },
+  { src: '/images/gallery/gallery-11-cocktails.jpg', alt: 'Row of handcrafted cocktails lined up' },
+  { src: '/images/gallery/gallery-12-guests.jpg', alt: 'Guests enjoying drinks at Society' },
+  { src: '/images/gallery/gallery-13-crowd-bw.jpg', alt: 'Packed house on a busy night' },
+  { src: '/images/gallery/gallery-14-food-spread.jpg', alt: 'Society small plates spread' },
+  { src: '/images/gallery/gallery-05-kitchen-bw.jpg', alt: 'Chef focused in the kitchen' },
+  { src: '/images/gallery/gallery-06-bar-pour-bw.jpg', alt: 'Bartender crafting drinks' },
+  { src: '/images/gallery/gallery-07-bar-bw.jpg', alt: 'Behind the bar at Society' },
+  { src: '/images/gallery/gallery-08-kitchen-cook.jpg', alt: 'Cook working the line' },
+  { src: '/images/gallery/gallery-09-chef-grill.jpg', alt: 'Chef at the grill in a Society shirt' },
+  { src: '/images/gallery/gallery-15-sign-mascot.jpg', alt: 'Society Sandwich Bar neon sign with mascot, Greenville SC' },
+  { src: '/images/gallery/gallery-16-staff-bw.jpg', alt: 'Society staff member at the bar' },
 ]
 
-function CameraIcon() {
-  return (
-    <svg className="w-8 h-8 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-        d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  )
-}
-
 export default function Gallery() {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+
+  function openLightbox(index) {
+    setLightboxIndex(index)
+    setLightboxOpen(true)
+  }
+
   return (
     <section id="gallery" className="py-20 md:py-28 bg-[#1a1a1a] scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,23 +39,25 @@ export default function Gallery() {
           <p className="section-eyebrow mb-3">The Vibe</p>
           <h2 className="section-title text-white mb-4">Gallery</h2>
           <div className="divider mx-auto mb-6" />
-          <p className="text-white/50 font-body max-w-xl mx-auto">
-            Photos coming soon. In the meantime, follow us on Instagram for a taste of what's happening at Society.
-          </p>
         </div>
 
-        {/* Grid
-            TODO: Replace placeholder divs with <img> elements once photography is available.
-            Suggested: use loading="lazy" and consider a lightbox library like
-            yet-another-react-lightbox for a full gallery experience. */}
+        {/* Photo grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {PLACEHOLDER_TONES.map((tone, i) => (
-            <div
+          {GALLERY_IMAGES.map((image, i) => (
+            <button
               key={i}
-              className={`${tone} border border-white/10 aspect-square rounded-lg flex items-center justify-center hover:border-society-gold/30 transition-colors duration-200`}
+              type="button"
+              onClick={() => openLightbox(i)}
+              className="aspect-square rounded-lg overflow-hidden border border-white/10 hover:border-society-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-society-gold transition-all duration-200 group"
+              aria-label={`View photo: ${image.alt}`}
             >
-              <CameraIcon />
-            </div>
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </button>
           ))}
         </div>
 
@@ -68,8 +75,14 @@ export default function Gallery() {
             Follow us @societygvl
           </a>
         </div>
-
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        index={lightboxIndex}
+        slides={GALLERY_IMAGES}
+      />
     </section>
   )
 }
