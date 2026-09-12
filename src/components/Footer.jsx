@@ -95,6 +95,31 @@ export default function Footer() {
 
         </div>
 
+        {/* Sister restaurant co-branding */}
+        <div className="border-t border-white/5 pt-8 pb-6">
+          <div className="flex flex-col items-center gap-3">
+            <p className="font-display uppercase tracking-widest text-white/30 text-xs">Sister Restaurant</p>
+            <a
+              href="https://www.citytaverngvl.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 group"
+            >
+              <img
+                src="/city-tavern-logo.jpeg"
+                alt="The City Tavern"
+                className="h-10 w-10 rounded-full object-cover border border-white/20 group-hover:border-white/50 transition-colors"
+              />
+              <div className="text-left">
+                <p className="font-display uppercase tracking-widest text-white/50 group-hover:text-white transition-colors text-sm leading-tight">
+                  The City Tavern
+                </p>
+                <p className="font-body text-white/25 text-xs">Greenville, SC · 128 N Main St</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
         {/* Bottom strip */}
         <div className="border-t border-white/5 pt-6 text-center space-y-1">
           <p className="font-body text-white/25 text-xs">

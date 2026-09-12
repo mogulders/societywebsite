@@ -1,13 +1,10 @@
-import { useOrder } from '../context/OrderContext'
-import { orderingConfig } from '../config/ordering'
+const ORDER_URL = import.meta.env.VITE_ORDER_URL || ''
 
 export default function OrderButton({ label = 'Order Online', className = 'btn-primary' }) {
-  const { openModal } = useOrder()
-
-  if (orderingConfig.isConfigured) {
+  if (ORDER_URL) {
     return (
       <a
-        href={orderingConfig.orderUrl}
+        href={ORDER_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={className}
@@ -18,8 +15,8 @@ export default function OrderButton({ label = 'Order Online', className = 'btn-p
   }
 
   return (
-    <button onClick={openModal} className={className}>
+    <span className={`${className} opacity-40 cursor-not-allowed`}>
       {label}
-    </button>
+    </span>
   )
 }

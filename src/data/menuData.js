@@ -1,230 +1,546 @@
 export const menuCategories = [
-    { id: "sandwiches", label: "Sandwiches" },
-    { id: "smallPlates", label: "Small Plates" },
-    { id: "salads", label: "Salads" },
-    { id: "cocktails", label: "Cocktails" },
-    { id: "beerWine", label: "Beer & Wine" },
-];
+  { id: 'sandwiches',  label: 'Sandwiches',   note: 'All sandwiches come standard with kettle chips. Kettle chips are cooked offsite in peanut oil.' },
+  { id: 'appetizers',  label: 'Appetizers',   note: null },
+  { id: 'noodles',     label: 'Noodles',      note: 'Miso broth available upon request · Gluten free noodles +$3.00' },
+  { id: 'greens',      label: 'Fresh Greens', note: null },
+  { id: 'cocktails',   label: 'Cocktails',    note: 'All cocktails $11.00' },
+  { id: 'spikedSodas', label: 'Spiked Sodas', note: 'All spiked sodas $10.00' },
+  { id: 'cannedBeer',  label: 'Beer',         note: null },
+  { id: 'wine',        label: 'Wine',         note: null },
+  { id: 'refreshers',  label: 'Refreshers',   note: 'Standard sodas include free refills' },
+  { id: 'lateNight',   label: 'Late Night',   note: 'Available 10:00 PM – 12:00 AM · All sandwiches come with kettle chips (cooked offsite in peanut oil)' },
+]
 
 export const menuData = {
-    sandwiches: [
-        {
-            name: "The Society OG",
-            price: "$14",
-            description:
-                "Smash beef patty, American cheese, house sauce, shredded lettuce, pickles, brioche bun.",
-            image: "/images/food/food-society-og.jpg",
-            allergens: ["Gluten", "Dairy", "Eggs"],
-        },
-        {
-            name: "Club Social",
-            price: "$13",
-            description:
-                "Shaved turkey, bacon, swiss, avocado, lettuce, tomato, toasted sourdough.",
-            image: null,
-            allergens: ["Gluten", "Dairy"],
-        },
-        {
-            name: "The Melt",
-            price: "$12",
-            description:
-                "Three-cheese blend, caramelized onions, jalapeño on thick-cut Texas toast.",
-            image: null,
-            allergens: ["Gluten", "Dairy"],
-        },
-        {
-            name: "Crispy Bird",
-            price: "$14",
-            description:
-                "Fried chicken thigh, honey hot sauce, house slaw, pickles, brioche bun.",
-            image: "/images/food/food-crispy-bird.jpg",
-            allergens: ["Gluten", "Eggs"],
-        },
-        {
-            name: "Philly Mob",
-            price: "$15",
-            description:
-                "Shaved ribeye, sautéed peppers & onions, cheese whiz, hoagie roll.",
-            image: "/images/food/food-philly-mob.jpg",
-            allergens: ["Gluten", "Dairy", "Soy"],
-        },
-        {
-            name: "The Cuban",
-            price: "$13",
-            description:
-                "Roasted pork, ham, swiss, mustard, pickles, pressed on Cuban bread.",
-            image: "/images/food/food-the-cuban.jpg",
-            allergens: ["Gluten", "Dairy"],
-        },
-        {
-            name: "The Veggie Social",
-            price: "$11",
-            description:
-                "Roasted peppers, hummus, avocado, cucumber, sprouts, grilled ciabatta.",
-            image: null,
-            allergens: ["Gluten", "Sesame"],
-        },
-    ],
-    smallPlates: [
-        {
-            name: "Skeleton Tots",
-            price: "$9",
-            description:
-                "Crispy tater tots, bacon crumble, cheddar cheese sauce, pickled jalapeño.",
-            image: null,
-            allergens: ["Dairy"],
-        },
-        {
-            name: "Deviled Eggs",
-            price: "$8",
-            description:
-                "House deviled eggs, pickled red onion, crispy bacon, paprika.",
-            image: null,
-            allergens: ["Eggs"],
-        },
-        {
-            name: "Queso Fundido",
-            price: "$10",
-            description:
-                "Melted queso, chorizo, roasted peppers, served with tortilla chips.",
-            image: null,
-            allergens: ["Dairy"],
-        },
-        {
-            name: "Society Wings",
-            price: "$13",
-            description:
-                "Crispy wings tossed in your choice of hot honey, buffalo, or garlic parm.",
-            image: null,
-            allergens: ["Dairy", "Eggs"],
-        },
-        {
-            name: "Pickle Fries",
-            price: "$8",
-            description:
-                "Beer-battered dill pickle slices, fried golden, served with comeback sauce.",
-            image: null,
-            allergens: ["Gluten", "Eggs"],
-        },
-    ],
-    salads: [
-        {
-            name: "The House",
-            price: "$10",
-            description:
-                "Mixed greens, cherry tomatoes, cucumber, red onion, croutons, house vinaigrette.",
-            image: null,
-            allergens: ["Gluten"],
-        },
-        {
-            name: "Caesar Social",
-            price: "$11",
-            description:
-                "Romaine, shaved parmesan, house-made croutons, classic Caesar dressing.",
-            image: null,
-            allergens: ["Gluten", "Dairy", "Eggs", "Fish"],
-        },
-        {
-            name: "Beet & Goat",
-            price: "$12",
-            description:
-                "Roasted beets, goat cheese, candied walnuts, arugula, balsamic glaze.",
-            image: null,
-            allergens: ["Dairy", "Tree Nuts"],
-        },
-        {
-            name: "Chopped Club",
-            price: "$13",
-            description:
-                "Iceberg, turkey, bacon, hard-boiled egg, cheddar, tomato, blue cheese dressing.",
-            image: null,
-            allergens: ["Dairy", "Eggs"],
-        },
-    ],
-    cocktails: [
-        {
-            name: "The Social Hour",
-            price: "$11",
-            description:
-                "Bourbon, honey syrup, fresh lemon, ginger beer, orange twist.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "Society Mule",
-            price: "$10",
-            description:
-                "Vodka, ginger beer, fresh lime, mint, served in a copper mug.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "Blood & Gold",
-            price: "$12",
-            description: "Tequila, blood orange juice, honey, Tajín rim.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "The Reaper",
-            price: "$13",
-            description:
-                "Mezcal, jalapeño-infused agave, lime, cucumber, tajín. Bring the heat.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "Main Street Paloma",
-            price: "$11",
-            description: "Tequila, fresh grapefruit, lime, agave, salt rim.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "Late Night Negroni",
-            price: "$12",
-            description:
-                "Gin, sweet vermouth, Campari, orange peel. Classic, stirred, cold.",
-            image: null,
-            allergens: [],
-        },
-    ],
-    beerWine: [
-        {
-            name: "Rotating Draft",
-            price: "$7",
-            description:
-                "Ask your bartender what's pouring today — always local, always cold.",
-            image: "",
-            allergens: ["Gluten"],
-        },
-        {
-            name: "Domestic Cans",
-            price: "$5",
-            description: "Your classics. You know what they are.",
-            image: null,
-            allergens: ["Gluten"],
-        },
-        {
-            name: "Craft Cans",
-            price: "$7",
-            description: "Curated selection of local and regional craft brews.",
-            image: null,
-            allergens: ["Gluten"],
-        },
-        {
-            name: "House Red",
-            price: "$9",
-            description: "Ask your server. We keep it interesting.",
-            image: null,
-            allergens: [],
-        },
-        {
-            name: "House White",
-            price: "$9",
-            description: "Crisp, cold, and ready when you are.",
-            image: null,
-            allergens: [],
-        },
-    ],
-};
+
+  // ─── SANDWICHES ─────────────────────────────────────────────────────────────
+  // Note: All sandwiches come standard with kettle chips.
+  // Kettle chips are cooked offsite in peanut oil.
+  sandwiches: [
+    {
+      name: 'Southern Weather',
+      price: '$13.45',
+      description: 'Fried chicken, hot honey, pickles, jalapeño, house made pimento cheese.',
+      image: '/images/food/food-crispy-bird.jpg',
+      video: null, // optional: set to a video path (e.g. '/videos/item.mp4') to show in the modal instead of image
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'The Animal',
+      price: '$13.45',
+      description: 'Double smash beef patties, american cheese, onions, pickles, signature cheese sauce, and our house-made werewolf sauce.',
+      image: '/images/food/food-society-og.jpg',
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Chicken Bacon Ranch',
+      price: '$14.45',
+      description: 'Grilled or fried chicken, signature cheese sauce, bacon, zesty ranch, lettuce, and tomato.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Pezzo Di Paradiso',
+      price: '$12.45',
+      description: 'House cut pepperoni, genoa salami, bacon, arugula, banana peppers, ricotta, parmesan, and sambal mayo. Served on grilled focaccia.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'The Wrigleyville',
+      price: '$15.95',
+      description: 'Seasoned slow braised beef, vienna beef co. hot italian giardiniera, and au jus for dipping.',
+      image: '/images/food/food-philly-mob.jpg',
+      allergens: ['Gluten'],
+    },
+    {
+      name: 'Caprese',
+      price: '$11.45',
+      description: 'Fresh buffalo mozzarella, ricotta, pesto, tomato, and grilled focaccia. Add grilled chicken breast $4.00.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Ménage À Hog',
+      price: '$12.45',
+      description: 'Fresh tavern ham, roasted pork, bacon, signature cheese sauce, and sweet & savory.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Seoul Mate',
+      price: '$11.95',
+      description: 'Fried chicken, korean bbq sauce, and tangy asian slaw.',
+      image: null,
+      allergens: ['Gluten', 'Soy'],
+    },
+    {
+      name: 'Hot Ham \'N Chez',
+      price: '$11.45',
+      description: "Shaved tavern ham, duke's mayo, and signature cheese sauce.",
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Hot Chick',
+      price: '$10.95',
+      description: 'Fried chicken, house made hot honey, and pickles.',
+      image: null,
+      allergens: ['Gluten', 'Eggs'],
+    },
+    {
+      name: 'Havana',
+      price: '$15.95',
+      description: 'Mojo pork, shaved tavern ham, sliced pickles, swiss cheese, and spicy mustard.',
+      image: '/images/food/food-the-cuban.jpg',
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Post Balone',
+      price: '$12.45',
+      description: 'Fried bologna, fried egg, lettuce, tomato, American cheese, spicy mustard, and sriracha.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'The JBC',
+      price: '$10.95',
+      description: "Smash beef patty bacon, American cheese, Duke's mayo, lettuce, tomato.",
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Chicken Cordon Bleu',
+      price: '$12.45',
+      description: 'Fried chicken, seared shaved tavern ham, swiss cheese, spicy mustard, and signature cheese sauce.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Clifford The Big Red Hot Dog',
+      price: '$7.95',
+      description: 'Jumbo all beef hot dog, bacon, fuego takis and signature cheese sauce.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Avocado Toast',
+      price: '$11.95',
+      description: 'Avocado, ricotta, arugula, citrus dressing, sunny side up egg, bacon, and balsamic drizzle.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Cheez Loufeez',
+      price: '$10.95',
+      description: 'Society three cheese blend, grilled focaccia, served with a side of house made hot honey.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+  ],
+
+  // ─── APPETIZERS ─────────────────────────────────────────────────────────────
+  appetizers: [
+    {
+      name: 'Huevos Rancheros Fries',
+      price: '$14.95',
+      description: 'Crispy golden fries, seasoned beef, signature cheese sauce, spicy ranchero sauce, jalapeños, avocado, sunny side up egg.',
+      image: null,
+      allergens: ['Dairy', 'Eggs'],
+    },
+    {
+      name: 'Jerk Chicken Fries',
+      price: '$14.95',
+      description: 'Crispy golden fries loaded with bold jerk sauce, creamy signature cheese sauce, grilled chicken, juicy grilled pineapple, and jalapeños.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+    {
+      name: 'Bacon Cheese Fries',
+      price: '$13.95',
+      description: 'Crispy golden fries, signature cheese sauce, crumbled crispy bacon.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+    {
+      name: 'Philly Cheese Egg Rolls',
+      price: '$13.65',
+      description: 'Shaved U.S. beef, melted American cheese, and sautéed peppers & onions. Served with our signature cheese sauce. Lovingly handrolled fresh daily — availability is limited for ultimate freshness.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Red Pepper Hummus',
+      price: '$11.95',
+      description: 'Roasted red pepper hummus served with toasted pita chips.',
+      image: null,
+      allergens: ['Gluten', 'Sesame'],
+    },
+    {
+      name: 'Shrimp Ceviche',
+      price: '$14.95',
+      description: 'Shrimp, leche de tigre, tomatoes, olive oil, avocado, sea salt, crushed black pepper, touch of dill, toasted pita chips.',
+      image: null,
+      allergens: ['Gluten', 'Shellfish'],
+    },
+    {
+      name: 'Jalapeño Pimento Cheese',
+      price: '$12.95',
+      description: 'Jalapeño pimento cheese with crispy bacon, toasted pita chips.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Ricotta Focaccia',
+      price: '$12.95',
+      description: 'Seasoned ricotta, hot honey, candied pecans, and grilled focaccia.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Tree Nuts'],
+    },
+  ],
+
+  // ─── NOODLES ────────────────────────────────────────────────────────────────
+  // *Miso Broth Available Upon Request. Gluten Free Noodles +$3.00
+  noodles: [
+    {
+      name: "Maui's Power Bowl",
+      price: '$15.95',
+      description: "A mighty mix of ramen noodles tossed in Maui's secret sauce, topped with shaved beef, grilled pineapple, sautéed peppers, and scrambled eggs. A bowl fit for a demigod!",
+      image: null,
+      allergens: ['Gluten', 'Eggs', 'Soy'],
+    },
+    {
+      name: 'Orange County Bowl',
+      price: '$15.95',
+      description: 'Ramen noodles and crispy fried chicken tossed in our signature Orange sauce with sautéed veggies and charmed orange wheels.',
+      image: null,
+      allergens: ['Gluten', 'Eggs'],
+    },
+    {
+      name: 'Coconut Curry Ramen',
+      price: '$15.95',
+      description: 'A coconut curry pork broth with ramen noodles, grilled chicken, chimichurri, fire roasted corn, lime, soft boiled egg, and fuego takis for a spicy kick.',
+      image: null,
+      allergens: ['Gluten', 'Eggs'],
+    },
+    {
+      name: 'Fuego San Diego',
+      price: '$15.95',
+      description: 'Savory tonkotsu broth with ramen noodles, seasoned beef, jalapeños, avocado, chimichurri, fire roasted corn, lime, soft boiled egg, and fuego takis for a spicy kick.',
+      image: null,
+      allergens: ['Gluten', 'Eggs'],
+    },
+    {
+      name: "Papa Legba's Voodoo Ramen",
+      price: '$16.95',
+      description: 'Tonkotsu broth with ramen noodles, blackened shrimp, andouille sausage, soft boiled egg, sautéed peppers, fried okra, hot sauce, and a sprinkle of black magic.',
+      image: null,
+      allergens: ['Gluten', 'Shellfish', 'Eggs'],
+    },
+    {
+      name: 'Hot Chick Ramen',
+      price: '$15.95',
+      description: 'Tonkotsu broth with ramen noodles, crispy fried chicken tossed in our house made hot honey, sliced pickles, jalapeños, soft boiled egg, and crispy chili wonton strips.',
+      image: null,
+      allergens: ['Gluten', 'Eggs'],
+    },
+    {
+      name: 'Chili Lime Shrimp',
+      price: '$16.95',
+      description: 'Tonkotsu broth with ramen noodles, grilled shrimp, chili crunch, sautéed red and green peppers, soft boiled egg, and lime wedges.',
+      image: null,
+      allergens: ['Gluten', 'Shellfish', 'Eggs'],
+    },
+  ],
+
+  // ─── FRESH GREENS ───────────────────────────────────────────────────────────
+  greens: [
+    {
+      name: 'Chicken Caesar Salad',
+      price: '$14.95',
+      description: 'Grilled chicken, romaine, crunchy garlic croutons, shaved parmesan, and creamy caesar dressing.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs', 'Fish'],
+    },
+    {
+      name: 'Mandarin Chicken Salad',
+      price: '$15.95',
+      description: 'Grilled chicken, fresh romaine, mandarin oranges, feta, candied raisins, candied pecans, wonton strips, and tangy asian dressing.',
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Tree Nuts'],
+    },
+    {
+      name: 'The Greek Salad',
+      price: '$14.45',
+      description: 'Grilled chicken, fresh romaine, feta, kalamata olives, tomatoes, capers, cucumbers, onions, and greek dressing.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+  ],
+
+  // ─── COCKTAILS ──────────────────────────────────────────────────────────────
+  // All cocktails $11.00
+  cocktails: [
+    {
+      name: 'Jager Colada',
+      price: '$11',
+      description: 'Jägermeister, Pineapple, Coconut Cream, Nutmeg.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Thunder Therapy',
+      price: '$11',
+      description: 'Lemon Vodka, Licor 43, Pineapple, Passion Fruit, Angostura Bitters.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Spicy Boi',
+      price: '$11',
+      description: 'Jalapeño Bälinto Tequila, Cointreau, Fresh Lime, Takis Simple Syrup, Ginger Beer.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Sans Souci',
+      price: '$11',
+      description: 'White Rum, Applejack, Velvet Falernum, Grapefruit, Lemon.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Nightmare on Coffee Street',
+      price: '$11',
+      description: 'Dark Rum, Baileys Cream, Coffee, and Xocolatl Mole Bitters.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+    {
+      name: 'A Fistful of Dollars',
+      price: '$11',
+      description: 'Illegal Mezcal, Fernet Branca, Orgeat, Lime, Angostura Bitters.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Julie Darling',
+      price: '$11',
+      description: 'Gin, Crème de Cassis, Lychee, Lemon, Sparkling Wine.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Caravan of Fools',
+      price: '$11',
+      description: 'Bottled in Bond Bourbon, Cardamaro, Amaro Peychaud\'s Bitters, Angostura Bitters.',
+      image: null,
+      allergens: [],
+    },
+  ],
+
+  // ─── SPIKED SODAS ───────────────────────────────────────────────────────────
+  // All spiked sodas $10.00
+  spikedSodas: [
+    {
+      name: 'Northern Lights',
+      price: '$10',
+      description: 'Mexican Sprite, Raspberry Vodka.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Americano',
+      price: '$10',
+      description: 'Topo Chico, Sweet Vermouth, Campari.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Paradise Punch',
+      price: '$10',
+      description: 'Sidral Mundet Apple, Pineapple Rum.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Hello Sunshine',
+      price: '$10',
+      description: 'Fanta Orange, Vanilla Bean Vodka.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Paloma',
+      price: '$10',
+      description: 'Jarritos Grapefruit, Silver Tequila, Lime.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'Cuba Libre',
+      price: '$10',
+      description: 'Mexican Coke, Silver Rum, Lime Juice.',
+      image: null,
+      allergens: [],
+    },
+  ],
+
+  // ─── CANNED BEER ────────────────────────────────────────────────────────────
+  cannedBeer: [
+    { name: 'Pabst Blue Ribbon',           price: '$3',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Miller Lite',                  price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Miller High Life',             price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Coors Light',                  price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Coors Banquet',                price: '$5',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Yuengling',                    price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Mich Ultra',                   price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Tecate',                       price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Modelo Especial',              price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Pacifico',                     price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Mango Cart',                   price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Stone Buenaveza',              price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Elysian Space Dust',           price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Creature Comfort Tropicalia',  price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Creature Comfort Automatik',   price: '$6',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Sam Adams Just the Haze',      price: '$4',   description: 'Non-Alcoholic', image: null, allergens: ['Gluten'] },
+    { name: 'Westbrook Seasonal Gose',      price: '$4',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Victory Sour Monkey',          price: '$10',  description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Wicked Weed Perni-Haze',       price: '$7',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Wicked Weed Fresh Pressed',    price: '$7',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Wicked Weed Seasonal',         price: '$7',   description: 'Ask your bartender — rotates seasonally.', image: null, allergens: ['Gluten'] },
+    { name: 'Sycamore Mountain Candy',      price: '$9',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Sycamore Juiciness IPA',       price: '$8',   description: '', image: null, allergens: ['Gluten'] },
+    { name: 'Doc\'s Cider Apple',           price: '$6',   description: '', image: null, allergens: [] },
+    { name: 'Austin Eastciders Blood Orange', price: '$7', description: '', image: null, allergens: [] },
+    { name: 'Austin Eastciders Black Berry', price: '$7',  description: '', image: null, allergens: [] },
+    { name: 'Rebel Rabbit CBD Beer',        price: '$9',   description: 'Variety of flavors', image: null, allergens: ['Gluten'] },
+    { name: 'High Noon',                    price: '$8',   description: 'Variety of flavors', image: null, allergens: [] },
+    { name: 'White Claw',                   price: '$7',   description: 'Various flavors', image: null, allergens: [] },
+    { name: 'Long Drink',                   price: '$8',   description: 'Regular or Diet', image: null, allergens: [] },
+  ],
+
+  // ─── WINE ───────────────────────────────────────────────────────────────────
+  wine: [
+    { name: 'Guild House Red',              price: '$7',   description: 'Red blend — super crushable. Bottle $25.', image: null, allergens: [] },
+    { name: 'Guild House White',            price: '$7',   description: 'White blend — super crushable. Bottle $25.', image: null, allergens: [] },
+    { name: 'Line 39 Sauvignon Blanc',      price: '$7',   description: 'White', image: null, allergens: [] },
+    { name: 'Line 39 Pinot Noir',           price: '$7',   description: 'Red', image: null, allergens: [] },
+    { name: 'Line 39 Rosé',                 price: '$7',   description: 'Pomegranate and cherry citrus. Bottle $25.', image: null, allergens: [] },
+    { name: 'Intercept Chardonnay',         price: '$12',  description: 'White — Santa Lucia Highlands. Bottle $45.', image: null, allergens: [] },
+    { name: 'Intercept Pinot Noir',         price: '$12',  description: 'Red — Santa Lucia Highlands. Bottle $45.', image: null, allergens: [] },
+    { name: 'Intercept Cabernet Sauvignon', price: '$12',  description: 'Red — dense, authentic. Bottle $45.', image: null, allergens: [] },
+  ],
+
+  // ─── REFRESHERS ─────────────────────────────────────────────────────────────
+  // Standard sodas include free refills
+  refreshers: [
+    { name: 'Coca-Cola',               price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Diet Coke',               price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Sprite',                  price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Ginger Ale',              price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Pink Lemonade',           price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Sweet Tea',               price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Unsweet Tea',             price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Cranberry Juice',         price: '$3',    description: 'Standard — free refills', image: null, allergens: [] },
+    { name: 'Mexican Coke',            price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Mexican Sprite',          price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Orange Fanta',            price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Topo Chico',              price: '$3.50', description: 'Premium sparkling water', image: null, allergens: [] },
+    { name: 'Jarritos Grapefruit',     price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Liquid Death Still',      price: '$3.50', description: 'Premium water', image: null, allergens: [] },
+    { name: 'Mundet Apple Soda',       price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Liquid Death Cherry',     price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Liquid Death Lime',       price: '$3.50', description: 'Premium', image: null, allergens: [] },
+    { name: 'Red Bull',                price: '$4',    description: 'Premium energy', image: null, allergens: [] },
+  ],
+
+  // ─── LATE NIGHT ─────────────────────────────────────────────────────────────
+  // Available 10:00 PM – 12:00 AM · All sandwiches come with kettle chips
+  lateNight: [
+    {
+      name: 'Philly Cheese Fries',
+      price: '$14.95',
+      description: 'Crispy Golden Fries, Shaved US Beef, Signature Cheese Sauce, Sautéed Peppers/Onions.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+    {
+      name: 'Bacon Cheese Fries',
+      price: '$13.95',
+      description: 'Crispy Golden Fries, Signature Cheese Sauce, Crumbled Crispy Bacon.',
+      image: null,
+      allergens: ['Dairy'],
+    },
+    {
+      name: 'Pimento Cheese',
+      price: '$12.95',
+      description: 'House-made Jalapeño Pimento Cheese with Crispy Bacon served with Toasted Pita Chips.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Shrimp Ceviche',
+      price: '$13.95',
+      description: 'Shrimp, Lime, Jalapeño, Avocado served with Toasted Pita Chips.',
+      image: null,
+      allergens: ['Gluten', 'Shellfish'],
+    },
+    {
+      name: 'Hummus Be Dreaming',
+      price: '$10.95',
+      description: 'Roasted Red Pepper and Garlic Hummus served with Toasted Pita Chips.',
+      image: null,
+      allergens: ['Gluten', 'Sesame'],
+    },
+    {
+      name: 'Plate of Fries',
+      price: '$9.95',
+      description: 'Served with your choice of sauce: Ketchup, Ranch, Mustard, BBQ, Korean BBQ.',
+      image: null,
+      allergens: [],
+    },
+    {
+      name: 'The JBC',
+      price: '$10.95',
+      description: "Smash Beef Patty, American Cheese, Duke's Mayo, Lettuce, Tomato.",
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+    {
+      name: 'Cheez Loufeez',
+      price: '$10.95',
+      description: 'Society Three Cheese Blend, Grilled Focaccia, served with a side of House-Made Hot Honey. Add Crispy Bacon +$3.00.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Clifford The Big Red Hot Dog',
+      price: '$7.95',
+      description: 'Jumbo All Beef House-Made Hot Dog, Bacon, Fuego Takis, Signature Cheese Sauce.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'Philly Cheese Steak',
+      price: '$14.95',
+      description: 'Shaved US Beef, Signature Cheese Sauce, Sautéed Peppers/Onions, Toasted Roma Roll.',
+      image: null,
+      allergens: ['Gluten', 'Dairy'],
+    },
+    {
+      name: 'The Wrigleyville',
+      price: '$15.45',
+      description: 'Seasoned Slow Braised Beef, Authentic Vienna Beef Co. Hot Italian Giardiniera and Au Jus.',
+      image: '/images/food/food-philly-mob.jpg',
+      allergens: ['Gluten'],
+    },
+    {
+      name: 'Hot Ham \'N Chez',
+      price: '$11.45',
+      description: "Seared Shaved Tavern Ham, Duke's Mayo, Signature Cheese Sauce.",
+      image: null,
+      allergens: ['Gluten', 'Dairy', 'Eggs'],
+    },
+  ],
+}
