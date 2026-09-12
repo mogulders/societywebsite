@@ -21,14 +21,15 @@ export const menuData = {
       name: 'Southern Weather',
       price: '$13.45',
       description: 'Fried chicken, hot honey, pickles, jalapeño, house made pimento cheese.',
-      image: null,
+      image: '/images/food/food-crispy-bird.jpg',
+      video: null, // optional: set to a video path (e.g. '/videos/item.mp4') to show in the modal instead of image
       allergens: ['Gluten', 'Dairy', 'Eggs'],
     },
     {
       name: 'The Animal',
       price: '$13.45',
       description: 'Double smash beef patties, american cheese, onions, pickles, signature cheese sauce, and our house-made werewolf sauce.',
-      image: null,
+      image: '/images/food/food-society-og.jpg',
       allergens: ['Gluten', 'Dairy'],
     },
     {
@@ -49,7 +50,7 @@ export const menuData = {
       name: 'The Wrigleyville',
       price: '$15.95',
       description: 'Seasoned slow braised beef, vienna beef co. hot italian giardiniera, and au jus for dipping.',
-      image: null,
+      image: '/images/food/food-philly-mob.jpg',
       allergens: ['Gluten'],
     },
     {
@@ -91,7 +92,7 @@ export const menuData = {
       name: 'Havana',
       price: '$15.95',
       description: 'Mojo pork, shaved tavern ham, sliced pickles, swiss cheese, and spicy mustard.',
-      image: null,
+      image: '/images/food/food-the-cuban.jpg',
       allergens: ['Gluten', 'Dairy'],
     },
     {
@@ -531,7 +532,7 @@ export const menuData = {
       name: 'The Wrigleyville',
       price: '$15.45',
       description: 'Seasoned Slow Braised Beef, Authentic Vienna Beef Co. Hot Italian Giardiniera and Au Jus.',
-      image: null,
+      image: '/images/food/food-philly-mob.jpg',
       allergens: ['Gluten'],
     },
     {
