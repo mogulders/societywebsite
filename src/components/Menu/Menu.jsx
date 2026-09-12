@@ -7,6 +7,7 @@ import OrderButton from '../OrderButton'
 export default function Menu() {
   const [activeTab, setActiveTab] = useState('sandwiches')
   const [selectedItem, setSelectedItem] = useState(null)
+  const activeCategory = menuCategories.find(c => c.id === activeTab) || {}
   const activeItems = menuData[activeTab] || []
 
   // Lock body scroll when item modal is open
@@ -47,6 +48,11 @@ export default function Menu() {
             </button>
           ))}
         </div>
+
+        {/* Category note */}
+        {activeCategory.note && (
+          <p className="text-center font-body text-white/40 text-sm mb-8 italic">{activeCategory.note}</p>
+        )}
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" role="list" aria-label="Menu items">

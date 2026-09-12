@@ -1,7 +1,8 @@
-import { CartProvider }   from './context/CartContext'
-import { OrderProvider } from './context/OrderContext'
-import OrderModal        from './components/Order/OrderModal'
-import Navbar            from './components/Navbar'
+import { CartProvider }       from './context/CartContext'
+import { OrderProvider }      from './context/OrderContext'
+import OrderModal             from './components/Order/OrderModal'
+import SpotOnLandingModal     from './components/SpotOnLandingModal'
+import Navbar                 from './components/Navbar'
 import Hero              from './components/Hero'
 import About             from './components/About'
 import Menu              from './components/Menu/Menu'
@@ -26,6 +27,7 @@ export default function App() {
           </main>
           <Footer />
           <OrderModal />
+          <SpotOnLandingModal />
         </div>
       </OrderProvider>
     </CartProvider>
