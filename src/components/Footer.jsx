@@ -126,7 +126,15 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Society Sandwich Bar and Social Club &nbsp;&bull;&nbsp; 18 E. Coffee St., Greenville, SC 29601
           </p>
           <p className="font-body text-white/15 text-xs">
-            Website by Neighbored LLC
+            Website by{' '}
+            <a
+              href="https://neighboredllc.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-society-gold transition-colors"
+            >
+              Neighbored LLC
+            </a>
           </p>
         </div>
       </div>
